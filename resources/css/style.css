@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -46,6 +47,7 @@ html {
 .nav a:visited {
     text-decoration: none;
     color: #fff;
+    -webkit-transition: color 0.3s;
     transition: color 0.3s;
 }
 
@@ -60,6 +62,7 @@ html {
     top: 50%;
     left: 50%;
     width: 1140px;
+    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 
@@ -121,6 +124,7 @@ h2:after {
 }
 
 .services {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url(img/services2.jpeg);
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/services2.jpeg);
     background-attachment: fixed;
     background-size: cover;
@@ -143,6 +147,7 @@ h2:after {
 }
 
 .network-box {
+    -webkit-box-shadow: 2px 2px 2px 1px #c3bebe;
     box-shadow: 2px 2px 2px 1px #c3bebe;
     margin-right: 20px;
     width: 350px;
@@ -155,11 +160,18 @@ h2:after {
 .mySlides {
     display: none;
     margin-left: 15px;
+    float: left;
 }
 
 .right {
     position:relative;
+    -webkit-animation:animateright 0.4s;
     animation:animateright 0.4s;
+}
+
+@-webkit-keyframes animateright{
+    from{right:-300px;opacity:0} 
+    to{right:0;opacity:1}
 }
 
 @keyframes animateright{
@@ -169,7 +181,13 @@ h2:after {
 
 .left {
     position:relative;
+    -webkit-animation:animateleft 0.5s;
     animation:animateleft 0.5s;
+}
+
+@-webkit-keyframes animateleft{
+    from{left:-300px;opacity:0} 
+    to{left:0;opacity:1}
 }
 
 @keyframes animateleft{
@@ -182,12 +200,11 @@ h2:after {
     padding: 0px 30px;
 }
 
-
 .network img {
     width: 200px;
     height: 125px;
     margin-left: 75px;
-    margin-top: 35px;
+    margin-top: 10px;
 }
 
 .network h3 {
@@ -209,6 +226,7 @@ h2:after {
 .network a:visited {
     text-decoration: none;
     color: #c352c3;
+    -webkit-transition: color 0.4s, border-bottom 0.4s;
     transition: color 0.4s, border-bottom 0.4s;
     border-bottom: 1px solid transparent;
     padding-bottom: 5px;
@@ -219,6 +237,23 @@ h2:after {
     border-bottom: 1px solid #9b369b;
     color: #9b369b;
     padding-bottom: 5px;
+}
+
+.first {
+    margin-left: 100px;
+}
+
+.second {
+    margin-left: 155px;
+}
+
+h4 {
+    padding: 20px 10px;
+    font-size: 90%;
+    text-align: center;
+    border-bottom: 1px solid #b5b5b5;
+    padding-bottom: 25px;
+    height: 30px;
 }
 
 .btn {
@@ -234,6 +269,7 @@ button {
     width: 50px;
     height: 50px;
     margin-bottom: 30px;
+    -webkit-transition: background-color 0.2s, color 0.2s;
     transition: background-color 0.2s, color 0.2s;
     padding-bottom: 3px;
     color: rgba(195, 82, 195, 0.85);
@@ -251,16 +287,29 @@ button:hover {
     color: #fff;
 }
 
+.left-button {
+    display: inline-block;
+    float: left;
+    margin-left: -130px;
+    margin-top: 200px;
+}
+
+.right-button {
+    display: inline-block;
+    float: right;
+    margin-right: -130px;
+    margin-top: 200px;
+}
+
 .footer {
     background-color: #989393;
-    height: 50px;
-
+    height: 55px;
 }
 
 .footer p {
     text-align: center;
     font-size: 70%;
-    margin-top: 20px;
+    margin-top: 23px;
 }
 
 .sticky {
